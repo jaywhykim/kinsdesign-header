@@ -1,120 +1,63 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <title>Rotating Header</title>
-
   <style>
-
-    body {
-
-      font-family: sans-serif;
-
-      font-size: 1.8em;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-      height: 100vh;
-
+    html, body {
       margin: 0;
-
-      padding: 20px;
-
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: transparent; /* Transparent background */
+      font-family: sans-serif;
+      font-size: 1.8em;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       box-sizing: border-box;
-
-      text-align: center;
-
     }
-
-
 
     #rotate-text {
-
       transition: opacity 0.5s ease;
-
-      display: inline-block;
-
       opacity: 1;
-
       max-width: 600px;
-
+      padding: 40px;
+      text-align: left; /* Align text to the left */
+      color: white; /* Set text color (you can change it) */
     }
-
   </style>
-
 </head>
-
 <body>
-
-
 
   <span id="rotate-text">Ditch the 9–5: Test Your Dream Before You Leap</span>
 
-
-
   <script>
-
     const phrases = [
-
       "Ditch the 9–5: Test Your Dream Before You Leap",
-
       "Escape the Grind. Validate Your Idea. Build What Matters.",
-
       "Your Exit Plan Starts Here: Prove Your Business Idea First",
-
       "Break Free the Smart Way—Validate Before You Quit",
-
       "Don’t Quit Blindly. Test Your Big Idea First.",
-
       "Before You Quit Your Day Job, Make Sure Your Dream Works",
-
       "From Desk Job to Dream Job—Start by Validating",
-
       "Think Before You Leap: Turn Your Idea Into Proof",
-
       "Plot Your Escape Route—Validate Before You Venture",
-
       "Build Your Safety Net: Validate Before You Jump Ship"
-
     ];
 
-
-
     let i = 0;
-
     const el = document.getElementById("rotate-text");
 
-
-
     setInterval(() => {
-
       el.style.opacity = 0;
-
       setTimeout(() => {
-
         i = (i + 1) % phrases.length;
-
         el.textContent = phrases[i];
-
         el.style.opacity = 1;
-
       }, 500);
-
     }, 4000);
-
   </script>
 
-
-
 </body>
-
 </html>
-
